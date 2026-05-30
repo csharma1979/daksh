@@ -56,6 +56,18 @@ export default function RootLayout({
       <body className={inter.className}>
         <GoogleAnalytics />
         {children}
+        {/* ChatPilot Widget */}
+        <Script
+          src="https://server.fritado.com/chatpilot.js"
+          data-token="06f83aa983d1af422e523cf422f065ad"
+          strategy="lazyOnload"
+        />
+        {/* Fritado Lead SDK */}
+        <Script
+          src="https://server.fritado.com/lead-sdk.js"
+          data-project-key="pk_live_3fe6e4a806c84e95fa14006ea5039b82"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
