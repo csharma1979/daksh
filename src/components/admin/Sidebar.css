@@ -1,0 +1,107 @@
+.sidebar {
+  width: var(--admin-sidebar-width);
+  background: var(--admin-sidebar-bg);
+  color: white;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+  z-index: 1000;
+}
+.sidebar.collapsed { width: 80px; }
+.sidebar-header {
+  padding: 24px;
+  height: var(--admin-header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.logo { height: 40px; background: white; padding: 5px; border-radius: 4px; }
+.toggle-btn {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.sidebar-nav {
+  padding: 20px 12px;
+  flex: 1;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  color: var(--admin-text-light);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+.nav-link:hover { background: rgba(255,255,255,0.05); color: white; cursor: pointer; }
+.nav-link.active { background: var(--brand-orange); color: white; }
+
+/* Submenu Styles */
+.nav-item-group {
+  margin-bottom: 4px;
+}
+.nav-item-group .nav-link {
+  margin-bottom: 0;
+}
+.dropdown-arrow {
+  margin-left: auto;
+  opacity: 0.7;
+}
+
+.submenu {
+  margin-top: 4px;
+  background: rgba(0,0,0,0.15);
+  border-radius: 8px;
+  padding: 4px 0;
+  display: flex;
+  flex-direction: column;
+}
+.submenu-link {
+  padding: 8px 16px 8px 46px;
+  font-size: 0.85rem;
+  color: var(--admin-text-light);
+  text-decoration: none;
+  transition: all 0.2s;
+  border-radius: 4px;
+  margin: 2px 8px;
+}
+.submenu-link:hover {
+  background: rgba(255,255,255,0.05);
+  color: white;
+}
+.submenu-link.active {
+  color: var(--brand-orange);
+  font-weight: 700;
+  background: rgba(255,107,0,0.1);
+}
+.submenu-link.all-pages {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  margin-top: 4px;
+  padding-top: 10px;
+  opacity: 0.6;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-footer {
+  padding: 20px;
+  font-size: 0.75rem;
+  color: var(--admin-text-light);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}

@@ -1,0 +1,119 @@
+.seo-intro-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F9FBFF 100%);
+  position: relative;
+  overflow: hidden;
+}
+.seo-intro-section::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(245, 130, 32, 0.05) 0%, transparent 70%);
+  z-index: 0;
+}
+.seo-content-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.premium-badge {
+  display: inline-block;
+  background: rgba(0, 43, 91, 0.05);
+  color: var(--brand-blue);
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  border: 1px solid rgba(0, 43, 91, 0.1);
+}
+.seo-main-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  color: var(--brand-blue);
+  margin-bottom: 30px;
+  font-weight: 900;
+}
+.text-orange-gradient {
+  background: linear-gradient(90deg, var(--brand-orange), #FFB16C);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.divider-glow {
+  width: 80px;
+  height: 4px;
+  background: var(--brand-orange);
+  margin: 0 auto 40px;
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(245, 130, 32, 0.4);
+}
+.seo-description {
+  font-size: 1.25rem;
+  color: #4B5563;
+  max-width: 850px;
+  margin: 0 auto 60px;
+  line-height: 1.8;
+}
+.seo-description strong {
+  color: var(--brand-blue);
+  font-weight: 800;
+}
+.seo-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.seo-link-item {
+  background: #FFFFFF;
+  padding: 25px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+.seo-link-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--brand-orange);
+}
+.seo-link-item .icon {
+  font-size: 2.5rem;
+}
+.link-text strong {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--brand-blue);
+  margin-bottom: 4px;
+}
+.link-text span {
+  font-size: 0.9rem;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .seo-links-grid {
+    grid-template-columns: 1fr;
+  }
+  .seo-intro-section {
+    padding: 60px 0;
+  }
+  .seo-main-title {
+    font-size: 2.5rem;
+  }
+}

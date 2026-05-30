@@ -1,0 +1,45 @@
+{
+  "name": "daksh-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -p 30005",
+    "build": "next build",
+    "start": "next start -p 30005",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@hello-pangea/dnd": "^18.0.1",
+    "@tiptap/extension-heading": "^3.21.0",
+    "@tiptap/extension-image": "^3.21.0",
+    "@tiptap/extension-link": "^3.21.0",
+    "@tiptap/extension-table": "^3.21.0",
+    "@tiptap/extension-table-cell": "^3.21.0",
+    "@tiptap/extension-table-header": "^3.21.0",
+    "@tiptap/extension-table-row": "^3.21.0",
+    "@tiptap/extension-youtube": "^3.21.0",
+    "@tiptap/react": "^3.21.0",
+    "@tiptap/starter-kit": "^3.21.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "bcryptjs": "^3.0.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.1",
+    "lucide-react": "^1.7.0",
+    "mongoose": "^9.3.3",
+    "next": "^16.2.1",
+    "next-auth": "^4.24.13",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "dotenv": "^17.3.1"
+  }
+}

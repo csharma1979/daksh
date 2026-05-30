@@ -1,0 +1,436 @@
+.vastu-page { background: #fff; scroll-behavior: smooth; }
+.text-blue-dark { color: #002B5B; }
+.bg-blue-dark { background: #002B5B; }
+
+.animate-pulse-slow { animation: pulse-slow 8s ease-in-out infinite; }
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; filter: drop-shadow(0 0 10px rgba(245, 130, 32, 0.2)); }
+  50% { transform: scale(1.1) rotate(5deg); opacity: 0.8; filter: drop-shadow(0 0 30px rgba(245, 130, 32, 0.4)); }
+}
+
+/* Mandala Style Standard */
+.mandala-bg-accent {
+  position: absolute;
+  top: 0%; right: -10%;
+  width: 1000px; height: 1000px;
+  background: radial-gradient(circle, rgba(245, 130, 32, 0.05) 0%, transparent 70%);
+  z-index: 1;
+  pointer-events: none;
+}
+.vastu-chakra-premium {
+   width: 500px;
+   height: 500px;
+   position: relative;
+   border-radius: 600px;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: rgba(255, 255, 255, 0.4);
+   backdrop-filter: blur(20px);
+   border: 1px solid rgba(0, 43, 91, 0.1);
+   box-shadow: 0 40px 100px rgba(0,0,0,0.03);
+   transition: all 0.5s ease;
+}
+.chakra-center-glow {
+   width: 120px;
+   height: 120px;
+   background: white;
+   border-radius: 150px;
+   z-index: 20;
+   box-shadow: 0 25px 60px rgba(245, 130, 32, 0.15);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.chakra-slice-premium {
+   position: absolute;
+   top: 0;
+   left: 250px;
+   width: 0px;
+   height: 250px;
+   transform-origin: bottom center;
+   cursor: pointer;
+   z-index: 10;
+}
+.slice-content-premium {
+   position: absolute;
+   top: 30px;
+   left: -35px;
+   width: 70px;
+   height: 70px;
+   background: white;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1px solid rgba(0,0,0,0.05);
+   transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.chakra-slice-premium:hover .slice-content-premium, .chakra-slice-premium.active .slice-content-premium {
+   background: var(--brand-orange);
+   color: white;
+   transform: translateY(-15px) scale(1.3) !important;
+   border-radius: 100px;
+}
+.dir-label-premium { font-size: 0.9rem; font-weight: 900; color: #002B5B; }
+.chakra-slice-premium.active .dir-label-premium { color: white; }
+
+/* Info Card Style */
+.info-card-premium { 
+  padding: 80px 70px; 
+  background: white; 
+  border-radius: 64px; 
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 50px 100px rgba(0,0,0,0.02);
+}
+.btn-modern-dark {
+  display: flex;
+  align-items: center;
+  background: #002B5B;
+  color: white;
+  padding: 22px 50px;
+  border-radius: 100px;
+  font-weight: 900;
+  border: none;
+  cursor: pointer;
+  transition: all 0.4s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.btn-modern-dark:hover {
+  transform: translateY(-5px);
+  background: var(--brand-orange);
+}
+
+/* Audit/Scorecard Style */
+.scorecard-box-premium {
+  background: white;
+  border-radius: 64px;
+  box-shadow: 0 50px 150px rgba(0,0,0,0.1);
+}
+.score-circle-premium {
+  width: 160px; height: 160px;
+  background: var(--brand-orange);
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.score-number { font-size: 3rem; font-weight: 900; }
+.score-label { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; }
+
+.audit-card-premium {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 32px;
+  cursor: pointer;
+  transition: all 0.4s;
+  text-align: left;
+}
+.audit-card-premium.active { background: #fff7ed; border-color: var(--brand-orange); }
+.check-indicator { width: 48px; height: 48px; border-radius: 100%; border: 2px solid #ddd; display: flex; align-items: center; justify-content: center; }
+.audit-card-premium.active .check-indicator { border-color: var(--brand-orange); color: var(--brand-orange); }
+.audit-text h4 { font-size: 1.25rem; font-weight: 800; color: #002B5B; }
+.audit-text p { font-size: 0.9rem; color: #64748b; }
+
+.btn-modern-orange {
+  background: var(--brand-orange);
+  color: white;
+  padding: 24px 64px;
+  border-radius: 100px;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Design Inspiration Boxes */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 40px;
+}
+.vastu-gallery-card {
+  position: relative;
+  border-radius: 40px;
+  overflow: hidden;
+  background: white;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+.vastu-gallery-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 40px 80px rgba(0, 43, 91, 0.12);
+}
+.vastu-card-image {
+  position: relative;
+  height: 480px;
+  width: 100%;
+}
+.vastu-card-image img {
+  transition: transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.vastu-gallery-card:hover .vastu-card-image img {
+  transform: scale(1.1);
+}
+
+/* Glassmorphism Title Box */
+.inspiration-info-box {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 28px;
+  transition: all 0.5s ease;
+  z-index: 10;
+}
+.vastu-gallery-card:hover .inspiration-info-box {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-5px);
+  border-color: var(--brand-orange);
+}
+.inspiration-info-box h3 {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #002B5B;
+  margin-bottom: 6px;
+}
+.inspiration-info-box p {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.5;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.vastu-gallery-card:hover .inspiration-info-box p {
+  opacity: 1;
+  height: auto;
+  margin-top: 10px;
+}
+
+.direction-tag {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: white;
+  color: #002B5B;
+  padding: 10px 22px;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  z-index: 10;
+  transition: all 0.4s;
+}
+.vastu-gallery-card:hover .direction-tag {
+  background: var(--brand-orange);
+  color: white;
+  transform: scale(1.1);
+}
+.category-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--brand-orange);
+  border-radius: 10px;
+  margin-right: 8px;
+}
+/* Five Elements Scientific Section */
+.element-card-premium {
+  display: flex;
+  gap: 28px;
+  padding: 40px;
+  background: white;
+  border-radius: 32px;
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  position: relative;
+  overflow: hidden;
+}
+.element-card-premium:hover {
+  transform: translateX(15px);
+  background: #fdfdfd;
+  box-shadow: 0 30px 60px rgba(0, 43, 91, 0.08);
+}
+.element-card-premium::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 4px; height: 0%;
+  background: var(--brand-orange);
+  transition: all 0.5s ease;
+}
+.element-card-premium:hover::before { height: 100%; }
+
+.element-icon-box {
+  width: 70px; height: 70px;
+  min-width: 70px;
+  background: #f8fafc;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #002B5B;
+  transition: all 0.5s;
+  border: 1px solid #eee;
+}
+.element-card-premium:hover .element-icon-box {
+  background: var(--brand-orange);
+  color: white;
+  border-color: var(--brand-orange);
+  transform: rotate(10deg) scale(1.1);
+  box-shadow: 0 15px 30px rgba(245, 130, 32, 0.3);
+}
+
+.scientific-meta {
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.quality-image-wrapper {
+  position: relative;
+}
+.image-scientific-border {
+  position: absolute;
+  inset: -15px;
+  border: 1px dashed rgba(245, 130, 32, 0.2);
+  border-radius: 100px;
+  animation: rotate-slow 60s linear infinite;
+  pointer-events: none;
+}
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Utilities & Shared Components */
+.filter-btn-premium {
+  padding: 14px 44px;
+  border-radius: 100px;
+  border: 1px solid #ddd;
+  background: white;
+  color: #002B5B;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.filter-btn-premium.active { background: var(--brand-orange); color: white; border-color: var(--brand-orange); }
+
+/* Daily Wisdom Insight Cards */
+/* Energy Pulse Background for Section */
+.wisdom-section-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: white;
+}
+.energy-surge-bg {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px; height: 1200px;
+  background: radial-gradient(circle, rgba(245, 130, 32, 0.03) 0%, transparent 70%);
+  z-index: 0;
+  animation: energy-pulse-surge 15s infinite alternate ease-in-out;
+  pointer-events: none;
+}
+@keyframes energy-pulse-surge {
+  from { transform: translate(-50%, -50%) scale(0.8); opacity: 0.2; }
+  to { transform: translate(-50%, -50%) scale(1.3); opacity: 1; }
+}
+
+.glass-tip-card {
+  padding: 60px 48px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 48px;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.glass-tip-card:hover {
+  transform: translateY(-20px);
+  background: white;
+  border-color: var(--brand-orange);
+  box-shadow: 0 40px 80px rgba(0, 43, 91, 0.08);
+}
+
+.tip-number {
+  position: absolute;
+  top: 40px; right: 40px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(245, 130, 32, 0.05);
+  line-height: 1;
+  transition: all 0.5s;
+}
+.glass-tip-card:hover .tip-number {
+  color: rgba(245, 130, 32, 0.15);
+  transform: scale(1.2);
+}
+
+.tip-icon-box {
+  width: 60px; height: 60px;
+  background: #f8fafc;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #002B5B;
+  margin-bottom: 40px;
+  transition: all 0.5s;
+}
+.glass-tip-card:hover .tip-icon-box {
+  background: var(--brand-orange);
+  color: white;
+  transform: rotate(-10deg);
+  box-shadow: 0 15px 30px rgba(245, 130, 32, 0.3);
+}
+
+.tip-vibe-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: var(--brand-orange);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.tip-decoration-line {
+  position: absolute; bottom: 0; left: 0;
+  width: 0%; height: 8px;
+  background: var(--brand-orange);
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.glass-tip-card:hover .tip-decoration-line { width: 100%; }
+
+.btn-modern-outline {
+  border: 2px solid #002B5B;
+  padding: 20px 48px;
+  border-radius: 100px;
+  font-weight: 900;
+  color: #002B5B;
+  text-decoration: none;
+  text-transform: uppercase;
+}

@@ -1,0 +1,237 @@
+/* Clients Admin Styles */
+.clients-page {
+  animation: fadeIn 0.4s ease-out;
+}
+
+.clients-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 25px;
+}
+
+.header-info h1 {
+  font-size: 2.2rem;
+  color: var(--brand-blue);
+  font-weight: 900;
+  margin: 0 0 8px;
+}
+
+.header-info p {
+  color: #9ca3af;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.btn-add-client {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--brand-orange);
+  color: white;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(249, 115, 22, 0.4);
+  transition: all 0.3s;
+}
+
+.btn-add-client:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5);
+}
+
+/* Table Enhancements */
+.client-logo-cell {
+  width: 100px;
+}
+
+.client-logo-preview {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  background: #f9fafb;
+  border-radius: 12px;
+  padding: 8px;
+  border: 1px solid #f3f4f6;
+}
+
+.client-name-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.client-name-group strong {
+  color: var(--brand-blue);
+  font-size: 1rem;
+}
+
+.client-url {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.client-url:hover {
+  color: var(--brand-orange);
+}
+
+/* Form Styles */
+.client-form-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+.logo-upload-area {
+  border: 2px dashed #e5e7eb;
+  border-radius: 16px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #f9fafb;
+}
+
+.logo-upload-area:hover {
+  border-color: var(--brand-orange);
+  background: #fff;
+}
+
+.logo-preview-large {
+  max-width: 200px;
+  max-height: 120px;
+  object-fit: contain;
+  margin: 0 auto 15px;
+  display: block;
+}
+
+.order-badge { 
+  background: #f3f4f6; 
+  padding: 4px 12px; 
+  border-radius: 8px; 
+  font-weight: 800; 
+  color: var(--brand-blue); 
+  font-size: 0.8rem; 
+}
+
+.empty-state {
+  text-align: center;
+}
+
+.empty-state h3 { 
+  font-size: 1.5rem; 
+  color: var(--brand-blue); 
+  margin-bottom: 10px; 
+}
+
+/* Premium Search & Filters */
+.search-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 20px;
+}
+
+.search-bar {
+  flex: 1;
+  position: relative;
+  max-width: 400px;
+}
+
+.search-bar svg {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.search-bar input:focus {
+  border-color: var(--brand-orange);
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.1);
+  outline: none;
+}
+
+.filter-tabs {
+  display: flex;
+  background: #f3f4f6;
+  padding: 5px;
+  border-radius: 12px;
+  gap: 5px;
+}
+
+.filter-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-tab.active {
+  background: white;
+  color: var(--brand-blue);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Enhanced Table Rows */
+.admin-table tr {
+  transition: all 0.2s;
+}
+
+.admin-table tr:hover {
+  background: #f9fafb;
+}
+
+/* Shared Page Navigation */
+.back-link { 
+  display: flex; 
+  align-items: center; 
+  gap: 5px; 
+  color: #9ca3af; 
+  text-decoration: none; 
+  font-weight: 700; 
+  margin-bottom: 10px; 
+  font-size: 0.9rem; 
+  transition: color 0.2s; 
+}
+
+.back-link:hover { 
+  color: var(--brand-orange); 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

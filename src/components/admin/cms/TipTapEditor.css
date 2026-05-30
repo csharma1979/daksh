@@ -1,0 +1,71 @@
+.tiptap-wrapper {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  background: white;
+}
+
+.tiptap-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tiptap-toolbar button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: #374151;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tiptap-toolbar button:hover {
+  background: #f3f4f6;
+  color: var(--brand-orange);
+}
+
+.tiptap-toolbar button.is-active {
+  background: var(--brand-orange-transparent);
+  color: var(--brand-orange);
+}
+
+.tiptap-toolbar .divider {
+  width: 1px;
+  height: 24px;
+  background: #e5e7eb;
+  margin: 6px 4px;
+}
+
+.tiptap-content {
+  padding: 16px 24px;
+  min-height: 150px;
+}
+
+.tiptap-content .ProseMirror {
+  outline: none;
+}
+
+.tiptap-content .ProseMirror p {
+  margin-bottom: 12px;
+}
+
+.tiptap-content .ProseMirror h1 { font-size: 2rem; font-weight: 800; margin: 24px 0 16px; }
+.tiptap-content .ProseMirror h2 { font-size: 1.5rem; font-weight: 700; margin: 20px 0 12px; }
+.tiptap-content .ProseMirror ul, 
+.tiptap-content .ProseMirror ol { padding-left: 24px; margin-bottom: 16px; }
+
+.tiptap-content .ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 16px 0;
+}

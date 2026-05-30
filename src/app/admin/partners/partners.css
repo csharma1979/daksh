@@ -1,0 +1,19 @@
+.partners-wrapper { display: flex; flex-direction: column; gap: 30px; }
+.page-header h1 { font-size: 2rem; margin-bottom: 8px; color: var(--admin-sidebar-bg); }
+
+.partners-table-container { 
+  background: white; 
+  border-radius: 20px; 
+  overflow: hidden; 
+  box-shadow: var(--shadow-sm); 
+  border: 1px solid #f3f4f6;
+}
+.partners-table { width: 100%; border-collapse: collapse; text-align: left; }
+.partners-table th { 
+  padding: 20px 24px; 
+  background: #f9fafb; 
+  font-size: 0.85rem; 
+  font-weight: 800; 
+  color: #6b7280; 
+  text-transform: uppercase; 
+}

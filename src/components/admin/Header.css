@@ -1,0 +1,42 @@
+.admin-header {
+  height: var(--admin-header-height);
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+.header-left h2 { font-size: 1.25rem; color: var(--admin-sidebar-bg); }
+.header-right { display: flex; align-items: center; gap: 20px; }
+.icon-btn { background: none; border: none; color: #6b7280; cursor: pointer; }
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-left: 1px solid #e5e7eb;
+  padding-left: 20px;
+}
+.user-info { display: flex; flex-direction: column; text-align: right; }
+.user-name { font-weight: 700; font-size: 0.9rem; color: #111827; }
+.user-role { font-size: 0.75rem; color: #6b7280; text-transform: capitalize; }
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  background: #f3f4f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+}
+.logout-btn {
+  margin-left: 10px;
+  color: #ef4444;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,35 @@
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.status-badge.accepted {
+  background: #dcfce7;
+  color: #15803d;
+}
+.status-badge.rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+.text-grey { color: #888; }
+.cell-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.truncate-text {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.85rem;
+  color: #666;
+}
+.enquiries-table code {
+  background: #f1f1f1;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.85rem;
+}
