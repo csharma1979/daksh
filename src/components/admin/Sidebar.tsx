@@ -8,7 +8,6 @@ import {
   LayoutDashboard, 
   MessageSquare, 
   Users, 
-  Settings, 
   Image as ImageIcon,
   ChevronLeft,
   ChevronDown,
@@ -52,7 +51,6 @@ const Sidebar = ({ role }: { role: string }) => {
       ]
     },
     { name: "Media", href: "/admin/media", icon: ImageIcon },
-    { name: "Settings", href: "/admin/settings", icon: Settings },
   ];
 
   return (
