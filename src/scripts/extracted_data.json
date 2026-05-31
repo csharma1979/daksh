@@ -1,0 +1,400 @@
+[
+  {
+    "slug": "bathroom",
+    "subcategories": [
+      "Master",
+      "Guest",
+      "Compact",
+      "Minimalist",
+      "Modern"
+    ],
+    "items": [
+      {
+        "id": 1,
+        "category": "Master Spa",
+        "title": "The Royal Spa Suite",
+        "image": "/design-ideas/bathroom/featured.png",
+        "description": "Freestanding soaking tub, marble waterfall shower, and dual vanity luxury."
+      },
+      {
+        "id": 2,
+        "category": "Minimalist",
+        "title": "Pure Zen Haven",
+        "image": "/design-ideas/bathroom/featured.png",
+        "description": "Clean white lines, floating wooden vanities, and clutter-free tranquility."
+      },
+      {
+        "id": 3,
+        "category": "Modern 2.0",
+        "title": "Metropolitan Edge",
+        "image": "/design-ideas/bathroom/featured.png",
+        "description": "Backlit mirrors, black matte fixtures, and smart integrated technology."
+      },
+      {
+        "id": 4,
+        "category": "Guest Suite",
+        "title": "Elegant Ensuite",
+        "image": "/design-ideas/bathroom/featured.png",
+        "description": "Space-efficient layouts with premium finishes for your most honored guests."
+      },
+      {
+        "id": 5,
+        "category": "Industrial",
+        "title": "Urban Exposed Loft",
+        "image": "/design-ideas/bathroom/featured.png",
+        "description": "Exposed brick accents, concrete finishes, and architecturally inspired design."
+      },
+      {
+        "id": 6,
+        "category": "Tropical",
+        "title": "Nature-Infused Bath",
+        "image": "/design-ideas/bathroom/featured.png",
+        "description": "Pebble stone flooring, bamboo accents, and an open-air inspired atmosphere."
+      }
+    ]
+  },
+  {
+    "slug": "bedroom",
+    "subcategories": [
+      "Luxury",
+      "Zen",
+      "Industrial",
+      "Boho",
+      "Kids",
+      "Classic"
+    ],
+    "items": [
+      {
+        "id": 1,
+        "category": "Luxury",
+        "title": "The Master Suite",
+        "image": "/design-ideas/bedroom/master.png",
+        "description": "Grand scale, velvet textures, and a private walk-in sanctuary."
+      },
+      {
+        "id": 2,
+        "category": "Zen",
+        "title": "Minimalist Retreat",
+        "image": "/design-ideas/bedroom/zen.png",
+        "description": "Low-profile wood, pure whites, and a focus on essential comfort."
+      },
+      {
+        "id": 3,
+        "category": "Industrial",
+        "title": "Urban Concrete Loft",
+        "image": "/design-ideas/bedroom/industrial.png",
+        "description": "Raw textures, metal accents, and a bold metropolitan feel."
+      },
+      {
+        "id": 4,
+        "category": "Boho",
+        "title": "Bohemian Sanctuary",
+        "image": "/design-ideas/bedroom/boho.png",
+        "description": "Natural rattan, layered textiles, and warm handcrafted spirit."
+      },
+      {
+        "id": 5,
+        "category": "Kids",
+        "title": "Adventure Haven",
+        "image": "/design-ideas/bedroom/kids.png",
+        "description": "Whimsical colors, smart play-areas, and imaginative dreamscapes."
+      },
+      {
+        "id": 6,
+        "category": "Classic",
+        "title": "Timeless Symmetery",
+        "image": "/design-ideas/bedroom/classic.png",
+        "description": "Soft greys, tufted luxury, and elegant crystal accents."
+      }
+    ]
+  },
+  {
+    "slug": "home-office",
+    "subcategories": [
+      "Executive",
+      "Creative",
+      "Compact",
+      "Modern",
+      "Classic"
+    ],
+    "items": [
+      {
+        "id": 1,
+        "category": "Executive",
+        "title": "The Corner Office",
+        "image": "/design-ideas/home-office/featured.png",
+        "description": "Productivity-focused layouts, integrated tech stations, and a professional aesthetic."
+      }
+    ]
+  },
+  {
+    "slug": "kids-room",
+    "subcategories": [
+      "Adventure",
+      "Shared",
+      "Creative"
+    ],
+    "items": [
+      {
+        "id": 1,
+        "category": "Adventure",
+        "title": "Rocket Ship Space Cabin",
+        "image": "/design-ideas/kids-room/kids_adventure_room_1775013751006.png",
+        "description": "Bespoke rocket bunk beds with integrated slides and starry celestial ceilings."
+      },
+      {
+        "id": 2,
+        "category": "Shared",
+        "title": "Bespoke Bunk Retreat",
+        "image": "/design-ideas/kids-room/kids_shared_bunk_room_1775013801004.png",
+        "description": "Architectural built-in bunk beds with integrated storage stairs and cozy reading nooks."
+      },
+      {
+        "id": 3,
+        "category": "Creative",
+        "title": "The Artist's Sanctuary",
+        "image": "/design-ideas/kids-room/kids_creative_room_1775013776161.png",
+        "description": "Multi-functional space with chalkboard walls, grand activity tables, and modular art storage."
+      },
+      {
+        "id": 4,
+        "category": "Adventure",
+        "title": "Jungle Safari Treehouse",
+        "image": "/design-ideas/kids-room/kids_adventure_room_1775013751006.png",
+        "description": "Nature-inspired designs with organic wood textures and hidden play alcoves."
+      },
+      {
+        "id": 5,
+        "category": "Shared",
+        "title": "Twin Zen Sanctuary",
+        "image": "/design-ideas/kids-room/kids_shared_bunk_room_1775013801004.png",
+        "description": "Balanced symmetry in pastel tones, crafted for harmony and individual expression."
+      },
+      {
+        "id": 6,
+        "category": "Creative",
+        "title": "Future Architect's Studio",
+        "image": "/design-ideas/kids-room/kids_creative_room_1775013776161.png",
+        "description": "Precision-engineered desk systems and wall-mounted display grids for young creators."
+      }
+    ]
+  },
+  {
+    "slug": "living-room",
+    "subcategories": [
+      "Modern",
+      "Minimalist",
+      "Industrial",
+      "Boho",
+      "Classic",
+      "Zen"
+    ],
+    "items": [
+      {
+        "id": 1,
+        "category": "Modern",
+        "title": "Urban Luxury Loft",
+        "image": "/design-ideas/living-room/modern.png",
+        "description": "Sleek lines, marble finishes, and floor-to-ceiling city views."
+      },
+      {
+        "id": 2,
+        "category": "Minimalist",
+        "title": "Scandinavian Calm",
+        "image": "/design-ideas/living-room/scandinavian.png",
+        "description": "Natural wood, neutral palette, and pure functional design."
+      },
+      {
+        "id": 3,
+        "category": "Industrial",
+        "title": "Brooklyn Brick Manor",
+        "image": "/design-ideas/living-room/industrial.png",
+        "description": "Exposed textures, leather accents, and grand volume."
+      },
+      {
+        "id": 4,
+        "category": "Boho",
+        "title": "Artisanal Chic",
+        "image": "/design-ideas/living-room/boho.png",
+        "description": "Vibrant colors, hand-woven textures, and indoor greenery."
+      },
+      {
+        "id": 5,
+        "category": "Classic",
+        "title": "Victorian Elegance",
+        "image": "/design-ideas/living-room/classic.png",
+        "description": "Timeless moldings, velvet luxury, and gold-hued sophistication."
+      },
+      {
+        "id": 6,
+        "category": "Zen",
+        "title": "Oriental Harmony",
+        "image": "/design-ideas/living-room/zen.png",
+        "description": "Quiet minimalism, bamboo accents, and tranquil symmetry."
+      }
+    ]
+  },
+  {
+    "slug": "modular-kitchen",
+    "subcategories": [
+      "Island",
+      "L-Shape",
+      "U-Shape",
+      "Parallel",
+      "Open"
+    ],
+    "items": [
+      {
+        "id": 1,
+        "category": "Island",
+        "title": "Luxury Waterfall Island",
+        "image": "/design-ideas/modular-kitchen/island.png",
+        "description": "Grand marble surfaces, integrated seating, and high-end built-in appliances."
+      },
+      {
+        "id": 2,
+        "category": "L-Shape",
+        "title": "Efficient Modern L-Shape",
+        "image": "/design-ideas/modular-kitchen/lshape.png",
+        "description": "Sleek matte finishes, corner storage solutions, and seamless workflow."
+      },
+      {
+        "id": 3,
+        "category": "Open",
+        "title": "Seamless Open Kitchen",
+        "image": "/design-ideas/modular-kitchen/open.png",
+        "description": "Breakfast bar transition, warm ambient lighting, and social culinary design."
+      },
+      {
+        "id": 4,
+        "category": "U-Shape",
+        "title": "Chef's Paradise U-Shape",
+        "image": "/design-ideas/modular-kitchen/island.png",
+        "description": "Maximum counter space, ergonomic layout, and premium professional gear."
+      },
+      {
+        "id": 5,
+        "category": "Parallel",
+        "title": "Sleek Parallel Galley",
+        "image": "/design-ideas/modular-kitchen/lshape.png",
+        "description": "Ideal for compact spaces, dual-sided storage, and modern metallic accents."
+      },
+      {
+        "id": 6,
+        "category": "Straight",
+        "title": "Minimalist Straight Line",
+        "image": "/design-ideas/modular-kitchen/open.png",
+        "description": "Hidden storage, integrated appliances, and a focus on clean, pure lines."
+      }
+    ]
+  },
+  {
+    "slug": "trending",
+    "subcategories": [
+      "Kitchen",
+      "Living",
+      "Bedroom",
+      "Ceiling",
+      "Pooja",
+      "Lighting"
+    ],
+    "items": [
+      {
+        "id": 1,
+        "category": "Kitchen",
+        "title": "Quiet Luxury Matte Stone",
+        "image": "/design-ideas/trending-hero.png",
+        "description": "Seamless stone surfaces with integrated induction and hidden task lighting."
+      },
+      {
+        "id": 2,
+        "category": "Living",
+        "title": "Biophilic Curved Lounge",
+        "image": "/design-ideas/trending-hero.png",
+        "description": "Architectural curves meeting vertical gardens and adaptive ambient lighting."
+      },
+      {
+        "id": 3,
+        "category": "Bedroom",
+        "title": "Minimalist Floating Sanctuary",
+        "image": "/design-ideas/trending-hero.png",
+        "description": "Zero-clutter design with smart glass partitions and tactile natural fabrics."
+      },
+      {
+        "id": 4,
+        "category": "Ceiling",
+        "title": "Layered Light Architecture",
+        "image": "/design-ideas/trending-hero.png",
+        "description": "Multi-dimensional false ceilings with magnetic track lighting and shadow gaps."
+      },
+      {
+        "id": 5,
+        "category": "Pooja",
+        "title": "Modern Spiritual Alcove",
+        "image": "/design-ideas/trending-hero.png",
+        "description": "CNC laser-cut marble jaali with high-CRI spiritual aura lighting."
+      },
+      {
+        "id": 6,
+        "category": "Lighting",
+        "title": "Smart Circadian Systems",
+        "image": "/design-ideas/trending-hero.png",
+        "description": "Human-centric lighting that adapts to natural daylight cycles automatically."
+      }
+    ]
+  },
+  {
+    "slug": "wardrobe",
+    "subcategories": [
+      "Sliding",
+      "Walk-in",
+      "Hinged",
+      "Glass",
+      "L-Shape"
+    ],
+    "items": [
+      {
+        "id": 1,
+        "category": "Sliding",
+        "title": "Sleek Sliding Wardrobe",
+        "image": "/design-ideas/wardrobe/sliding.png",
+        "description": "Space-saving sliding doors with premium matte finish and integrated lighting."
+      },
+      {
+        "id": 2,
+        "category": "Walk-in",
+        "title": "Luxury Walk-in Closet",
+        "image": "/design-ideas/wardrobe/sliding.png",
+        "description": "Open-plan storage, dedicated shoe racks, and premium island dresser."
+      },
+      {
+        "id": 3,
+        "category": "Hinged",
+        "title": "Classic Hinged Mastery",
+        "image": "/design-ideas/wardrobe/sliding.png",
+        "description": "Ergonomic handles, soft-close hinges, and timeless architectural moldings."
+      },
+      {
+        "id": 4,
+        "category": "Glass",
+        "title": "Elegant Glass Display",
+        "image": "/design-ideas/wardrobe/sliding.png",
+        "description": "Tinted glass doors, internal leather lining, and sensor-based LED glow."
+      },
+      {
+        "id": 5,
+        "category": "L-Shape",
+        "title": "Corner Space Optimizer",
+        "image": "/design-ideas/wardrobe/sliding.png",
+        "description": "Smart corner carousels, hidden safes, and maximum vertical utility."
+      },
+      {
+        "id": 6,
+        "category": "Mirrored",
+        "title": "Reflective Opulence",
+        "image": "/design-ideas/wardrobe/sliding.png",
+        "description": "Full-length mirrored panels to expand your room visually and aesthetically."
+      }
+    ]
+  }
+]

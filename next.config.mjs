@@ -7,6 +7,15 @@ const nextConfig = {
       { protocol: "https", hostname: "livspace.com" },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/design-ideas/trending",
+        destination: "/design-ideas/trending-designs",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

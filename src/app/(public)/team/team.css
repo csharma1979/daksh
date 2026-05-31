@@ -1,0 +1,160 @@
+.team-page {
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+/* Hero Section */
+.team-hero {
+  position: relative;
+  height: 40vh;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.team-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 43, 91, 0.8), rgba(0, 43, 91, 0.95));
+  z-index: 1;
+}
+
+.team-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  padding: 0 20px;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.team-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+.team-hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+/* Team Grid Section */
+.team-section {
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-color: var(--brand-orange);
+}
+
+.team-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.team-image-wrapper img {
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-image-wrapper img {
+  transform: scale(1.05);
+}
+
+.team-info {
+  padding: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-info h3 {
+  font-size: 1.5rem;
+  color: var(--brand-blue);
+  margin-bottom: 4px;
+}
+
+.team-role {
+  color: var(--brand-orange);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.team-bio {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.team-socials {
+  display: flex;
+  gap: 16px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+  margin-top: auto;
+}
+
+.social-link {
+  color: #94a3b8;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-link:hover {
+  color: var(--brand-blue);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .team-image-wrapper {
+    height: 300px;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

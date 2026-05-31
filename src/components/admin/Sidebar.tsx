@@ -16,7 +16,8 @@ import {
   Quote,
   Briefcase,
   UserCheck,
-  ShieldCheck
+  ShieldCheck,
+  Building
 } from "lucide-react";
 
 const Sidebar = ({ role }: { role: string }) => {
@@ -38,6 +39,7 @@ const Sidebar = ({ role }: { role: string }) => {
     { name: "Testimonials", href: "/admin/testimonials", icon: Quote },
     { name: "Enquiries", href: "/admin/enquiries", icon: MessageSquare },
     { name: "User Consents", href: "/admin/consents", icon: ShieldCheck },
+    { name: "Team", href: "/admin/team", icon: Building },
     { name: "Partner Requests", href: "/admin/partners", icon: UserCheck },
     { name: "Clients", href: "/admin/clients", icon: Users },
     { 
@@ -50,7 +52,7 @@ const Sidebar = ({ role }: { role: string }) => {
         { name: "Applications", href: "/admin/applications" },
       ]
     },
-    { name: "Media", href: "/admin/media", icon: ImageIcon },
+    { name: "Design Ideas", href: "/admin/media/design-ideas", icon: ImageIcon },
   ];
 
   return (

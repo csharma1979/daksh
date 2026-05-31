@@ -2,84 +2,32 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import TrustStats from "@/components/TrustStats";
-import DesignHero from "@/components/DesignHero";
-import DesignSessionCTA from "@/components/DesignSessionCTA";
-import FAQSection from "@/components/FAQSection";
 
-const galleryItems = [
-  {
-    id: 1,
-    category: "Luxury",
-    title: "The Master Suite",
-    image: "/design-ideas/bedroom/master.png",
-    description: "Grand scale, velvet textures, and a private walk-in sanctuary."
-  },
-  {
-    id: 2,
-    category: "Zen",
-    title: "Minimalist Retreat",
-    image: "/design-ideas/bedroom/zen.png",
-    description: "Low-profile wood, pure whites, and a focus on essential comfort."
-  },
-  {
-    id: 3,
-    category: "Industrial",
-    title: "Urban Concrete Loft",
-    image: "/design-ideas/bedroom/industrial.png",
-    description: "Raw textures, metal accents, and a bold metropolitan feel."
-  },
-  {
-    id: 4,
-    category: "Boho",
-    title: "Bohemian Sanctuary",
-    image: "/design-ideas/bedroom/boho.png",
-    description: "Natural rattan, layered textiles, and warm handcrafted spirit."
-  },
-  {
-    id: 5,
-    category: "Kids",
-    title: "Adventure Haven",
-    image: "/design-ideas/bedroom/kids.png",
-    description: "Whimsical colors, smart play-areas, and imaginative dreamscapes."
-  },
-  {
-    id: 6,
-    category: "Classic",
-    title: "Timeless Symmetery",
-    image: "/design-ideas/bedroom/classic.png",
-    description: "Soft greys, tufted luxury, and elegant crystal accents."
-  }
-];
-
-const categories = ["All", "Luxury", "Zen", "Industrial", "Boho", "Kids", "Classic"];
-
-export default function BedroomIdeas() {
+export default function DesignGalleryClient({ subcategories, galleries }: { subcategories: any[], galleries: any[] }) {
   const [activeCategory, setActiveCategory] = useState("All");
 
   const filteredItems = activeCategory === "All"
-    ? galleryItems
-    : galleryItems.filter(item => item.category === activeCategory);
+    ? galleries
+    : galleries.filter(item => item.subcategoryId?.name === activeCategory);
 
   return (
-    <main className="design-ideas-page">
-      <DesignHero
-        title="Bedroom Interior <span class='text-orange'>Design Ideas</span>"
-        subtitle="Discover our range of luxury bedroom designs in Bangalore, crafted for ultimate comfort from grand master suites to imaginative children's spaces."
-        backgroundImage="/inspiration/master-bedroom.png"
-        breadcrumbCategory="Bedroom"
-      />
-
+    <>
       {/* Filter Bar */}
       <section className="filter-section container">
         <div className="filter-bar">
-          {categories.map(cat => (
+          <button
+            className={`filter-btn ${activeCategory === "All" ? 'active' : ''}`}
+            onClick={() => setActiveCategory("All")}
+          >
+            All
+          </button>
+          {subcategories.map(sub => (
             <button
-              key={cat}
-              className={`filter-btn ${activeCategory === cat ? 'active' : ''}`}
-              onClick={() => setActiveCategory(cat)}
+              key={sub._id}
+              className={`filter-btn ${activeCategory === sub.name ? 'active' : ''}`}
+              onClick={() => setActiveCategory(sub.name)}
             >
-              {cat}
+              {sub.name}
             </button>
           ))}
         </div>
@@ -89,16 +37,16 @@ export default function BedroomIdeas() {
       <section className="gallery-section container">
         <div className="gallery-grid">
           {filteredItems.map(item => (
-            <div key={item.id} className="gallery-card">
+            <div key={item._id} className="gallery-card">
               <div className="card-image">
                 <Image
-                  src={item.image}
+                  src={item.featuredImage || item.images[0] || '/placeholder.png'}
                   alt={item.title}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="img-transition"
                 />
-                <div className="category-tag">{item.category}</div>
+                <div className="category-tag">{item.subcategoryId?.name || 'Uncategorized'}</div>
               </div>
               <div className="card-content">
                 <h3>{item.title}</h3>
@@ -106,16 +54,15 @@ export default function BedroomIdeas() {
               </div>
             </div>
           ))}
+          {filteredItems.length === 0 && (
+            <div style={{ padding: '40px', textAlign: 'center', gridColumn: '1 / -1', color: '#666' }}>
+              No designs found for this category.
+            </div>
+          )}
         </div>
       </section>
 
-
-
-      <DesignSessionCTA />
-      <TrustStats />
-
       <style jsx>{`
-        .design-ideas-page { background: #fff; padding-bottom: 80px; }
         .text-orange { color: var(--brand-orange); }
 
         .filter-section { padding: 50px 0 30px; }
@@ -172,12 +119,11 @@ export default function BedroomIdeas() {
 
         @media (max-width: 1024px) {
           .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-          .gallery-hero h1 { font-size: 2.5rem; }
         }
         @media (max-width: 640px) {
           .gallery-grid { grid-template-columns: 1fr; }
         }
       `}</style>
-    </main>
+    </>
   );
 }

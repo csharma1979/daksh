@@ -15,6 +15,10 @@ import TrustStats from "@/components/TrustStats";
 import DesignHero from "@/components/DesignHero";
 import "./DesignIdeas.css";
 import { Metadata } from "next";
+import { getCategories } from "@/lib/actions/designCategories";
+import dbConnect from "@/lib/mongodb";
+import DesignGallery from "@/models/DesignGallery";
+import LeadForm from "@/components/LeadForm";
 
 export const metadata: Metadata = {
   title: "Interior Design Ideas & Inspirations | Daksh Interiors Bangalore",
@@ -22,76 +26,42 @@ export const metadata: Metadata = {
   keywords: "Interior design ideas Bangalore, home decor inspirations, modular kitchen designs, luxury bedroom ideas, trending interiors 2026"
 };
 
-const designCategories = [
-  {
-    title: "Trending 2026",
-    slug: "trending",
-    image: "/design-ideas/trending-hero.png",
-    count: "45+ Ideas",
-    icon: <TrendingUp size={24} />,
-    description: "The latest luxury forecasts and modern evolutions for Indian homes."
-  },
-  {
-    title: "Living Room",
-    slug: "living-room",
-    image: "/inspiration/living-room.png",
-    count: "120+ Designs",
-    icon: <Layout size={24} />,
-    description: "Contemporary, ethnic, and minimalist themes for the heart of your home."
-  },
-  {
-    title: "Modular Kitchen",
-    slug: "modular-kitchen",
-    image: "/inspiration/modular-kitchen.png",
-    count: "80+ Layouts",
-    icon: <ChefHat size={24} />,
-    description: "Ergonomic, easy-to-clean, and high-tech culinary spaces."
-  },
-  {
-    title: "Bedroom",
-    slug: "bedroom",
-    image: "/inspiration/master-bedroom.png",
-    count: "60+ Themes",
-    icon: <Bed size={24} />,
-    description: "Relaxing sanctuaries and space-optimized master suites."
-  },
-  {
-    title: "Wardrobes",
-    slug: "wardrobe",
-    image: "/inspiration/wardrobe.png",
-    count: "50+ Styles",
-    icon: <Layers size={24} />,
-    description: "Bespoke storage solutions from walk-in closets to sliding systems."
-  },
-  {
-    title: "Home Office",
-    slug: "home-office",
-    image: "/inspiration/home-office.png",
-    count: "30+ Setups",
-    icon: <Briefcase size={24} />,
-    description: "Productivity-optimized workspaces built for the modern professional."
-  },
-  {
-    title: "Bathroom",
-    slug: "bathroom",
-    image: "/inspiration/bathroom.png",
-    count: "40+ Concepts",
-    icon: <Bath size={24} />,
-    description: "Spa-like luxury and functional transformations for wet areas."
-  },
-  {
-    title: "Kids Room",
-    slug: "kids-room",
-    image: "/artifacts/kids_adventure_room_1775013751006.png",
-    count: "35+ Ideas",
-    icon: <Sparkles size={24} />,
-    description: "Imaginative sanctuaries from rocket-ship bunks to creative play zones."
-  }
-];
+const iconMap: Record<string, React.ReactNode> = {
+  "trending": <TrendingUp size={24} />,
+  "trending-designs": <TrendingUp size={24} />,
+  "living-room": <Layout size={24} />,
+  "modular-kitchen": <ChefHat size={24} />,
+  "full-kitchen-designs": <ChefHat size={24} />,
+  "bedroom": <Bed size={24} />,
+  "wardrobe": <Layers size={24} />,
+  "wardrobe-designs": <Layers size={24} />,
+  "home-office": <Briefcase size={24} />,
+  "bathroom": <Bath size={24} />,
+  "kids-room": <Sparkles size={24} />,
+  "tv-units-and-storage": <Layout size={24} />,
+  "false-ceiling": <Layout size={24} />,
+  "pooja-room": <Sparkles size={24} />,
+  "vastu-tips": <Sparkles size={24} />
+};
 
-import LeadForm from "@/components/LeadForm";
+async function getCategoriesWithCounts() {
+  await dbConnect();
+  const categories = await getCategories();
+  
+  const mapped = await Promise.all(categories.map(async (cat: any) => {
+    const count = await DesignGallery.countDocuments({ categoryId: cat._id, status: "Active" });
+    return {
+      ...cat,
+      count
+    };
+  }));
+  
+  return mapped;
+}
 
-export default function DesignIdeasDirectory() {
+export default async function DesignIdeasDirectory() {
+  const designCategories = await getCategoriesWithCounts();
+
   return (
     <main className="design-directory-page">
       <DesignHero
@@ -103,25 +73,25 @@ export default function DesignIdeasDirectory() {
       {/* Grid Section */}
       <section className="directory-grid-section container">
         <div className="directory-grid">
-          {designCategories.map((cat, idx) => (
+          {designCategories.filter(c => c.status === "Active").map((cat, idx) => (
             <Link href={`/design-ideas/${cat.slug}`} key={idx} className="dir-card">
               <div className="card-image-box">
                 <Image
-                  src={cat.image}
-                  alt={cat.title}
+                  src={cat.heroImage || "/inspiration/living-room.png"}
+                  alt={cat.name}
                   fill
                   style={{ objectFit: 'cover' }}
                   className="card-img"
                 />
                 <div className="card-overlay" />
-                <div className="card-count">{cat.count}</div>
+                <div className="card-count">{cat.count}+ Ideas</div>
               </div>
               <div className="card-info">
                 <div className="card-header">
-                  <div className="icon-box">{cat.icon}</div>
-                  <h3>{cat.title}</h3>
+                  <div className="icon-box">{iconMap[cat.slug] || <Layout size={24} />}</div>
+                  <h3>{cat.name}</h3>
                 </div>
-                <p>{cat.description}</p>
+                <p>{cat.heroSubtitle || "Explore our premium designs."}</p>
                 <div className="card-footer">
                   <span>Explore Designs</span>
                   <ArrowRight size={18} />

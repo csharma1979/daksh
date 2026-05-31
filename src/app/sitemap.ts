@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/false-ceiling',
     '/wardrobes',
     '/storage-units',
-    '/design-ideas/trending',
+    '/design-ideas/trending-designs',
     '/design-ideas/modular-kitchen',
   ].map((route) => ({
     url: `${baseUrl}${route}`,

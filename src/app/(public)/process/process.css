@@ -1,0 +1,247 @@
+.process-page {
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+/* Hero Section */
+.process-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 43, 91, 0.75), rgba(0, 43, 91, 0.95));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  padding: 0 20px;
+  animation: fadeUp 1s ease-out forwards;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ffffff;
+}
+
+/* Timeline Section */
+.timeline-section {
+  padding: 100px 20px;
+  background: white;
+}
+
+.timeline-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* The vertical line */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #f1f5f9;
+  border-radius: 4px;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+  position: relative;
+  width: 100%;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-content {
+  width: 45%;
+  background: #f8fafc;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  border: 1px solid #e2e8f0;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  border-color: var(--brand-orange);
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  color: var(--brand-blue);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.timeline-content p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Step Number Label */
+.step-number {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--brand-orange);
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Icon in the middle */
+.timeline-icon {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: white;
+  border: 4px solid var(--brand-orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-orange);
+  z-index: 2;
+  box-shadow: 0 0 0 4px white;
+}
+
+/* Alternating logic */
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Trust Section */
+.trust-section {
+  background: var(--brand-blue);
+  padding: 80px 20px;
+  color: white;
+}
+
+.trust-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.trust-header h2 {
+  font-size: 2.5rem;
+  color: white;
+}
+
+.trust-header span {
+  color: var(--brand-orange);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trust-card {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+
+.trust-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.trust-card svg {
+  margin: 0 auto 20px;
+  color: var(--brand-orange);
+}
+
+.trust-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: white;
+}
+
+.trust-card p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .timeline-container::before {
+    left: 30px;
+  }
+  
+  .timeline-item, .timeline-item:nth-child(even) {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  
+  .timeline-icon {
+    left: 0;
+    transform: none;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 90px);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

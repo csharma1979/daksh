@@ -72,7 +72,7 @@ const Navbar = () => {
               </div>
               <div className="megamenu-column">
                 <h4>Inspiration</h4>
-                <Link href="/design-ideas/trending">Trending Designs</Link>
+                <Link href="/design-ideas/trending-designs">Trending Designs</Link>
                 <Link href="/vastu-tips">Vastu Tips</Link>
               </div>
               <div className="megamenu-promo">
