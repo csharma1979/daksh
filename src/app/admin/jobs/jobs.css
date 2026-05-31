@@ -110,7 +110,7 @@
   max-width: 400px;
 }
 
-.search-wrapper :global(svg) {
+.search-wrapper svg {
   position: absolute;
   left: 15px;
   top: 50%;
@@ -201,7 +201,7 @@
   letter-spacing: 1px;
 }
 
-.section-title :global(svg) {
+.section-title svg {
   color: var(--brand-orange);
 }
 
@@ -211,7 +211,7 @@
   align-items: center;
 }
 
-.input-with-icon :global(svg) {
+.input-with-icon svg {
   position: absolute;
   left: 15px;
   color: #9ca3af;

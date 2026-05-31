@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { updatePage } from "@/app/admin/pages/actions";
+import { updatePage } from "@/lib/actions/pages";
 import { Save, Eye, Settings, Globe, Layout, ChevronDown, ChevronRight } from "lucide-react";
 
 import "./PageEditorForm.css";
