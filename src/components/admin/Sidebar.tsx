@@ -3,11 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { getPagesList } from "@/lib/actions/pages";
 import "./Sidebar.css";
 import { 
   LayoutDashboard, 
-  FileText, 
   MessageSquare, 
   Users, 
   Settings, 
@@ -26,18 +24,8 @@ const Sidebar = ({ role }: { role: string }) => {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(false);
   const [expandedGroups, setExpandedGroups] = useState<Record<string, boolean>>({
-    "Pages": true,
     "Careers": true
   });
-  const [pages, setPages] = useState<any[]>([]);
-
-  useEffect(() => {
-    const fetchPages = async () => {
-      const data = await getPagesList();
-      setPages(data);
-    };
-    fetchPages();
-  }, []);
 
   const toggleGroup = (name: string) => {
     setExpandedGroups(prev => ({
@@ -48,19 +36,6 @@ const Sidebar = ({ role }: { role: string }) => {
 
   const menuItems = [
     { name: "Dashboard", href: "/admin/dashboard", icon: LayoutDashboard },
-    { 
-      name: "Pages", 
-      href: "/admin/pages", 
-      icon: FileText,
-      hasSubmenu: true,
-      submenu: [
-        ...pages.map(p => ({
-          name: p.title,
-          href: `/admin/pages/${p._id}`
-        })),
-        { name: "View All Pages", href: "/admin/pages", isUtility: true }
-      ]
-    },
     { name: "Testimonials", href: "/admin/testimonials", icon: Quote },
     { name: "Enquiries", href: "/admin/enquiries", icon: MessageSquare },
     { name: "User Consents", href: "/admin/consents", icon: ShieldCheck },
