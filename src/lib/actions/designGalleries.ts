@@ -2,6 +2,7 @@
 
 import dbConnect from "../mongodb";
 import DesignGallery from "@/models/DesignGallery";
+import DesignCategory from "@/models/DesignCategory";
 import { revalidatePath } from "next/cache";
 
 export async function getGalleries(filters: any = {}) {
@@ -25,6 +26,15 @@ export async function createGallery(data: any) {
   await dbConnect();
   const newGallery = await DesignGallery.create(data);
   revalidatePath("/admin/media/design-ideas");
+  
+  // Revalidate public routes
+  revalidatePath("/design-ideas");
+  if (data.categoryId) {
+    const category = await DesignCategory.findById(data.categoryId);
+    if (category) {
+      revalidatePath(`/design-ideas/${category.slug}`);
+    }
+  }
   return JSON.parse(JSON.stringify(newGallery));
 }
 
@@ -32,12 +42,31 @@ export async function updateGallery(id: string, data: any) {
   await dbConnect();
   const updated = await DesignGallery.findByIdAndUpdate(id, data, { new: true });
   revalidatePath("/admin/media/design-ideas");
+  
+  // Revalidate public routes
+  revalidatePath("/design-ideas");
+  if (updated && updated.categoryId) {
+    const category = await DesignCategory.findById(updated.categoryId);
+    if (category) {
+      revalidatePath(`/design-ideas/${category.slug}`);
+    }
+  }
   return JSON.parse(JSON.stringify(updated));
 }
 
 export async function deleteGallery(id: string) {
   await dbConnect();
+  const gallery = await DesignGallery.findById(id);
   await DesignGallery.findByIdAndDelete(id);
   revalidatePath("/admin/media/design-ideas");
+  
+  // Revalidate public routes
+  revalidatePath("/design-ideas");
+  if (gallery && gallery.categoryId) {
+    const category = await DesignCategory.findById(gallery.categoryId);
+    if (category) {
+      revalidatePath(`/design-ideas/${category.slug}`);
+    }
+  }
   return { success: true };
 }
