@@ -46,8 +46,8 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({ success: true, urls: savedUrls });
-  } catch (error) {
+  } catch (error: any) {
     console.error("Design Ideas upload error:", error);
-    return NextResponse.json({ error: "Upload failed" }, { status: 500 });
+    return NextResponse.json({ error: `Upload failed: ${error.message || error}` }, { status: 500 });
   }
 }

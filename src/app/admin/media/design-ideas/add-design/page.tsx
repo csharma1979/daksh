@@ -202,6 +202,7 @@ export default function AddDesignPage() {
                 accept="image/png, image/jpeg, image/jpg, image/webp" 
                 style={{ display: 'none' }} 
                 onChange={handleFileUpload} 
+                onClick={(e) => e.stopPropagation()}
               />
               <UploadCloud size={40} style={{ color: '#f97316', margin: '0 auto 10px' }} />
               <p style={{ fontWeight: '600', color: '#1e293b', marginBottom: '4px' }}>
